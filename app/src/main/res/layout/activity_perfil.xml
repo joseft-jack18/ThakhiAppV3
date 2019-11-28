@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#061433">
+
+
+        <EditText
+            android:id="@+id/txtcelular"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/formulario2"
+            android:hint="Nro celular"
+            android:paddingLeft="40dp"
+            android:textColor="#fff"
+            android:textColorHint="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtcorreo"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/formulario2"
+            android:hint="Correo"
+            android:paddingLeft="40dp"
+            android:textColor="#fff"
+            android:textColorHint="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtnuevaclave"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/formulario2"
+            android:hint="Nueva Clave"
+            android:paddingLeft="40dp"
+            android:textColor="#fff"
+            android:password="true"
+            android:textColorHint="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtconfimarclave"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/formulario2"
+            android:hint="Confirmar Clave"
+            android:paddingLeft="40dp"
+            android:textColor="#fff"
+            android:password="true"
+            android:textColorHint="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtfoto"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="360dp"
+            android:background="@drawable/formulario2"
+            android:hint="url foto"
+            android:paddingLeft="40dp"
+            android:textColor="#fff"
+            android:textColorHint="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="#ffff"
+            android:text="Cargar Foto"
+            android:textColor="#dfd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtfoto">
+
+        </Button>
+
+        <ImageButton
+            android:id="@+id/btnguardar"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/txtpassword"
+            android:background="@drawable/btn_guardar"
+            app:layout_constraintBottom_toTopOf="@+id/desing"
+            app:layout_constraintCircleRadius="@android:dimen/app_icon_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintVertical_bias="0.535"/>
+
+        <ImageView
+            android:id="@+id/desing"
+            android:layout_width="420dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_elipse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
