@@ -15,7 +15,7 @@ class EjemploActivity : AppCompatActivity() {
 
     //lateinit var cls : UbicacionActivity
 
-    /*private lateinit var mRunnable:Runnable
+    private lateinit var mRunnable:Runnable
     private lateinit var mHandler: Handler
     private lateinit var mRandom1: Random
     private lateinit var mRandom2: Random
@@ -65,5 +65,5 @@ class EjemploActivity : AppCompatActivity() {
             },
             Response.ErrorListener { })
         rq.add(sr)
-    }*/
+    }
 }
