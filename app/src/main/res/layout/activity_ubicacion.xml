@@ -18,16 +18,16 @@
         tools:context=".UbicacionActivity"
         tools:layout_editor_absoluteX="-42dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_ubicacion"
         android:layout_width="278dp"
         android:layout_height="65dp"
-        android:text="Enviar Ubicacion"
+        android:background="@drawable/enviarubicacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.924" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
