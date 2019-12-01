@@ -54,6 +54,7 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
 
         btn_ubicacion.setOnClickListener {
             //codigo para guardar la latitud y longitud en la base de datos
+            setUpMap()
             var url = ClsConexion.url + "CapturarUbicacion.php?CLIlatitud=" + lat + "&CLIlongitud=" + lon + "&CLIdni=" + ClsConexion.dni
             var rq = Volley.newRequestQueue(this)
             var sr = StringRequest(
@@ -106,13 +107,6 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
             )
             return
         }
-
-
-
-
-
-
-
 
         mMap.isMyLocationEnabled = true
 
