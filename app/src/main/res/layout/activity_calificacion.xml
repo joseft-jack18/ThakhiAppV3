@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CalificacionActivity"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/codigo"
@@ -16,9 +17,7 @@
         android:paddingHorizontal="15dp"
         android:textSize="18dp"
         android:text="Codigo"
-        android:textColor="#000"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        android:textColor="#000"/>
 
     <TextView
         android:id="@+id/dni"
@@ -28,9 +27,7 @@
         android:paddingHorizontal="15dp"
         android:text="DNI"
         android:textSize="18dp"
-        android:textColor="#000"
-        app:layout_constraintTop_toBottomOf="@+id/codigo"
-        tools:layout_editor_absoluteX="0dp" />
+        android:textColor="#000" />
 
     <TextView
         android:id="@+id/conductor"
@@ -95,4 +92,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llamada" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

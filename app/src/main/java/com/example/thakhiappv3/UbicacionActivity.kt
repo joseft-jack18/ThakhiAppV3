@@ -60,7 +60,7 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
             var sr = StringRequest(
                 Request.Method.GET, url,
                 Response.Listener { response ->
-                    Toast.makeText(this,"Ubicacion guardada!",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Se ha enviado su Ubicacion!",Toast.LENGTH_LONG).show()
                 },
                 Response.ErrorListener { })
             rq.add(sr)
