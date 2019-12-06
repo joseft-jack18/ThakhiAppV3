@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ListaActivity"></activity>
         <activity android:name=".CalificacionActivity" />
         <activity android:name=".EjemploActivity" />
         <activity android:name=".PerfilActivity" />
@@ -36,13 +37,15 @@
             android:name=".UbicacionActivity"
             android:label="@string/title_activity_ubicacion" />
         <activity android:name=".RegistroActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".SplashActivity">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
