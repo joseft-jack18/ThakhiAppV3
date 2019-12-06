@@ -13,7 +13,7 @@
 
         <EditText
             android:id="@+id/txtdni"
-            android:layout_width="310dp"
+            android:layout_width="210dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/formulario2"
@@ -23,7 +23,7 @@
             android:textColorHint="#DADADA"
             app:layout_constraintBottom_toTopOf="@+id/txtnombre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.223"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0">
@@ -32,7 +32,7 @@
 
         <EditText
             android:id="@+id/txtapellido"
-            android:layout_width="310dp"
+            android:layout_width="320dp"
             android:layout_height="60dp"
             android:layout_marginTop="160dp"
             android:background="@drawable/formulario2"
@@ -49,7 +49,7 @@
 
         <EditText
             android:id="@+id/txtcelular"
-            android:layout_width="310dp"
+            android:layout_width="320dp"
             android:layout_height="60dp"
             android:layout_marginTop="220dp"
             android:background="@drawable/formulario2"
@@ -58,7 +58,7 @@
             android:textColor="#fff"
             android:textColorHint="#DADADA"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -66,7 +66,7 @@
 
         <EditText
             android:id="@+id/txtcorreo"
-            android:layout_width="310dp"
+            android:layout_width="320dp"
             android:layout_height="60dp"
             android:layout_marginTop="280dp"
             android:background="@drawable/formulario2"
@@ -75,7 +75,7 @@
             android:textColor="#fff"
             android:textColorHint="#DADADA"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -83,17 +83,17 @@
 
         <EditText
             android:id="@+id/txtclave"
-            android:layout_width="310dp"
+            android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_marginTop="340dp"
             android:background="@drawable/formulario2"
             android:hint="Clave"
+            android:inputType="textPassword"
             android:paddingLeft="40dp"
-            android:password="true"
             android:textColor="#fff"
             android:textColorHint="#DADADA"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintEnd_toStartOf="@+id/txtconfirma"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -101,32 +101,32 @@
 
         <EditText
             android:id="@+id/txtconfirma"
-            android:layout_width="310dp"
+            android:layout_width="160dp"
             android:layout_height="60dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="340dp"
             android:background="@drawable/formulario2"
             android:hint="Confirmar Clave"
-            android:paddingLeft="40dp"
+            android:paddingLeft="20dp"
             android:password="true"
             android:textColor="#fff"
             android:textColorHint="#DADADA"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.816"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         </EditText>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btncargar"
             android:layout_width="88dp"
-            android:layout_height="63dp"
+            android:layout_height="60dp"
             android:background="#00574B"
             android:text="Cargar Foto"
             android:textColor="#dfd"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.842"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintStart_toEndOf="@+id/txtfoto"
             app:layout_constraintTop_toBottomOf="@+id/txtconfirma">
 
         </Button>
@@ -134,15 +134,15 @@
         <EditText
             android:id="@+id/txtfoto"
             android:layout_width="220dp"
-            android:layout_height="63dp"
-            android:layout_marginTop="460dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="400dp"
             android:background="@drawable/formulario2"
             android:hint="url foto"
             android:paddingLeft="40dp"
             android:textColor="#000"
             android:textColorHint="#DADADA"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.261"
+            app:layout_constraintHorizontal_bias="0.235"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -150,7 +150,7 @@
 
         <EditText
             android:id="@+id/txtnombre"
-            android:layout_width="310dp"
+            android:layout_width="320dp"
             android:layout_height="60dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/formulario2"
@@ -170,6 +170,7 @@
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_below="@+id/txtpassword"
+            android:layout_marginBottom="36dp"
             android:background="@drawable/btn_guardar"
             app:layout_constraintBottom_toTopOf="@+id/desing"
             app:layout_constraintCircleRadius="@android:dimen/app_icon_size"
@@ -177,19 +178,30 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2"
-            app:layout_constraintVertical_bias="0.463"></ImageButton>
+            app:layout_constraintVertical_bias="1.0"></ImageButton>
 
         <ImageView
             android:id="@+id/desing"
             android:layout_width="420dp"
             android:layout_height="60dp"
+            android:layout_marginBottom="140dp"
             android:background="@drawable/ic_elipse"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_foto"
+            android:layout_width="145dp"
+            android:layout_height="138dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnguardar"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="1.0">
-        </ImageView>
+            app:layout_constraintTop_toBottomOf="@+id/txtfoto"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@mipmap/ic_launcher" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

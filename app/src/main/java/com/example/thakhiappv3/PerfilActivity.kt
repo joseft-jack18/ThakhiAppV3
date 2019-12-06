@@ -21,6 +21,9 @@ class PerfilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
 
+
+
+
         btnguardar.setOnClickListener {
             if(txtclave.text.toString() != txtconfirma.text.toString()){
                 Toast.makeText(this,"Las contraseñas no coinciden... Intente de nuevo",
