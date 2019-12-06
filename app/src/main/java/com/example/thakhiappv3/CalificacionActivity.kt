@@ -12,7 +12,6 @@ class CalificacionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calificacion)
 
         codigo.text = "Codigo : " + admEnttEntrega.ENTid
-        dni.text = admEnttEntrega.CONdni
-
+        dni.text = "DNI Conductor: " + admEnttEntrega.CONdni
     }
 }

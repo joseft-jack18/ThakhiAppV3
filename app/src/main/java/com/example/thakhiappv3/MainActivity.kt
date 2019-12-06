@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         valoracion.setOnClickListener {
 
             ObtenerDatosEntrega(ClsConexion.dni,fechaactual)
-            var i= Intent(this,CalificacionActivity::class.java)
+            var i= Intent(this,Splash2Activity::class.java)
             startActivity(i)
         }
 
