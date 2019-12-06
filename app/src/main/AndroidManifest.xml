@@ -20,9 +20,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".NotificacionActivity"></activity>
         <activity android:name=".Splash2Activity" />
-        <activity android:name=".ListaActivity" />
         <activity android:name=".CalificacionActivity" />
-        <activity android:name=".EjemploActivity" />
         <activity android:name=".PerfilActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
