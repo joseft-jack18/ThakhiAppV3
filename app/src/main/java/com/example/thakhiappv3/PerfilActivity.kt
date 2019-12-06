@@ -34,7 +34,7 @@ class PerfilActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
             }
             else{
-                var url = ClsConexion.url + "ModificarClienteCliente.php?CLIcelular=" + txtcelular.text.toString() +
+                var url = ClsConexion.url + "ModificarCliente.php?CLIcelular=" + txtcelular.text.toString() +
                         "&CLIemail=" + txtcorreo.text.toString() +
                         "&CLIclave=" + txtnuevaclave.text.toString() +
                         "&CLIdni=" + ClsConexion.dni
