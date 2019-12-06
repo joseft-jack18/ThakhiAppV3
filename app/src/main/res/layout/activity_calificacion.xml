@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".CalificacionActivity"
-    android:background="#fff"
-    android:orientation="vertical">
+    android:background="#fff">
 
     <TextView
         android:id="@+id/codigo"
@@ -17,6 +15,19 @@
         android:paddingHorizontal="15dp"
         android:textSize="18dp"
         android:text="Codigo"
+        android:textColor="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="18dp"
+        android:text="Descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/codigo"
         android:textColor="#000"/>
 
     <TextView
@@ -27,7 +38,9 @@
         android:paddingHorizontal="15dp"
         android:text="DNI"
         android:textSize="18dp"
-        android:textColor="#000" />
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/conductor"
@@ -39,18 +52,31 @@
         android:text="Conductor"
         android:textColor="#000"
         tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/dni"/>
+        app:layout_constraintTop_toBottomOf="@+id/dni"
+        />
 
     <TextView
         android:id="@+id/celular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="15dp"
+        android:text="987654321"
+        android:textColor="#000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conductor" />
+
+    <TextView
+        android:id="@+id/costo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:paddingHorizontal="15dp"
         android:textSize="18dp"
-        android:text="Celular"
+        android:text="Costo"
         android:textColor="#000"
-        app:layout_constraintTop_toBottomOf="@+id/conductor"
+        app:layout_constraintTop_toBottomOf="@+id/celular"
         tools:layout_editor_absoluteX="0dp" />
 
     <RatingBar
@@ -69,7 +95,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conductor"/>
+        app:layout_constraintTop_toBottomOf="@+id/celular">
+
+    </RatingBar>
+
 
     <ImageButton
         android:id="@+id/llamada"
@@ -79,17 +108,20 @@
         android:background="@drawable/llamar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/favorite"/>
+        app:layout_constraintTop_toBottomOf="@+id/favorite">
+
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/btnguardar"
         android:layout_width="250dp"
         android:layout_height="70dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_guardar"
         app:layout_constraintCircleRadius="@android:dimen/app_icon_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llamada" />
+        app:layout_constraintTop_toBottomOf="@+id/llamada"></ImageButton>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,7 @@
             android:layout_below="@+id/txtcorreo"
             android:background="@drawable/txt_password"
             android:paddingLeft="50dp"
-            android:password="true"
+            android:inputType="textPassword"
             android:textColor="#000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"

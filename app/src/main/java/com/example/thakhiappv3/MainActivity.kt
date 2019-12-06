@@ -7,9 +7,11 @@ import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.thakhiappv3.Clases.admEnttEntrega
 import com.example.thakhiappv3.Conexion.ClsConexion
+import kotlinx.android.synthetic.main.activity_calificacion.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
@@ -36,10 +38,23 @@ class MainActivity : AppCompatActivity() {
         }
 
         valoracion.setOnClickListener {
+            var url= ClsConexion.url + "BuscarCalificacion.php?CALfecha=" + fechaactual.toString()
+            var rq= Volley.newRequestQueue(this)
 
-            ObtenerDatosEntrega(ClsConexion.dni,fechaactual)
-            var i= Intent(this,Splash2Activity::class.java)
-            startActivity(i)
+            var sr= StringRequest(Request.Method.GET,url,
+                Response.Listener { response ->
+                    if(response=="0"){
+                        var i= Intent(this,NotificacionActivity::class.java)
+                        startActivity(i)
+                    }
+                    if(response=="1"){
+                        ObtenerDatosEntrega(ClsConexion.dni,fechaactual)
+                        var i= Intent(this,Splash2Activity::class.java)
+                        startActivity(i)
+                    }
+                },
+                Response.ErrorListener {  })
+            rq.add(sr)
         }
 
         perfil.setOnClickListener {
@@ -57,15 +72,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun ObtenerDatosEntrega(dni:String,fecha:String){
-        Toast.makeText(this,"DNI " + dni + " fecha: " + fecha,Toast.LENGTH_LONG).show()
+        //Toast.makeText(this,"DNI " + dni + " fecha: " + fecha,Toast.LENGTH_LONG).show()
         var url= ClsConexion.url + "ListarCalificaciones.php?CLIdni=" + dni + "&ENTfechahora=" + fecha
         var rq= Volley.newRequestQueue(this)
 
         val sr = JsonArrayRequest( Request.Method.GET, url, null,
             Response.Listener { response ->
                 admEnttEntrega.ENTid = response.getJSONObject(0).getString("ENTid")
+                admEnttEntrega.ENTdescripcion = response.getJSONObject(0).getString("ENTdescripcion")
                 admEnttEntrega.CONdni = response.getJSONObject(0).getString("CONdni")
-                Toast.makeText(this,"numero:" + admEnttEntrega.ENTid,Toast.LENGTH_SHORT).show()
+                admEnttEntrega.CONnombre = response.getJSONObject(0).getString("CONnombre")
+                admEnttEntrega.CONapellido = response.getJSONObject(0).getString("CONapellido")
+                admEnttEntrega.CONcelular = response.getJSONObject(0).getString("CONcelular")
+                admEnttEntrega.ENTprecio = response.getJSONObject(0).getDouble("ENTprecio")
+                //Toast.makeText(this,"numero:" + admEnttEntrega.ENTid,Toast.LENGTH_SHORT).show()
                 /*ClsConexion.dni = response.getJSONObject(0).getString("CLIdni")
                 ClsConexion.nombres = response.getJSONObject(0).getString("CLInombre") + " " +
                         response.getJSONObject(0).getString("CLIapellido")

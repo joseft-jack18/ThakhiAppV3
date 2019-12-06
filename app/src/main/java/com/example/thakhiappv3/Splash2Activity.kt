@@ -14,7 +14,7 @@ class Splash2Activity : AppCompatActivity() {
         val timer = object : Thread() {
             override fun run() {
                 try {
-                    Thread.sleep(3000)
+                    Thread.sleep(4000)
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
