@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     val fechaactual = sdf.format(Date())
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

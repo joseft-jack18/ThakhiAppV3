@@ -10,13 +10,14 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.thakhiappv3.Clases.Client
 import com.example.thakhiappv3.Clases.Cliente
 import com.example.thakhiappv3.Conexion.ClsConexion
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    val list=ArrayList<Cliente>()
+    var cli = Client()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
                 Response.Listener { response ->
                     Toast.makeText(this,"Bienvenido " + response.getJSONObject(0).getString("CLInombre"),
                         Toast.LENGTH_SHORT).show()
-                    ClsConexion.dni = response.getJSONObject(0).getString("CLIdni")
+                    cli.clIdni = response.getJSONObject(0).getString("CLIdni")
                     ClsConexion.nombres = response.getJSONObject(0).getString("CLInombre") + " " +
                             response.getJSONObject(0).getString("CLIapellido")
 
